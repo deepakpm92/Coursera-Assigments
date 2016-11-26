@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <style >
+
+            .error {
+
+                color: red;
+
+            }
+
+            .success {
+
+                color: green;
+
+            }
+
+            .error1 {
+                border: 1px solid red;
+            }
+
+            .success1 {
+                border: 1px solid green;
+            }
+
+            #but {
+
+                padding: 5px;
+                border-radius: 4px;
+                color: white;
+                background-color: green;
+                border: none;
+                cursor: pointer;
+
+            }
+            #but:hover {
+
+                background-color: #45a049;
+
+            }
+
+        </style>
+
+    </head>
+    <body ng-app="LunchCheck">
+        <div ng-controller="LunchCheckController">
+
+            <input type="text" ng-class="d" ng-model='items'>
+
+            <button type="button" id="but" ng-click="Check()">Check If Too Much</button><br>
+            <div ng-class="c">
+                {{message}}
+            </div>
+            <p style="color:orange">
+              Note: An empty item is not considered toward the count
+            </p>
+
+        </div>
+
+    </body>
+</html>
